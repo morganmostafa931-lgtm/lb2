@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>فايبر — تداول أوضح، قرار أهدأ.</title>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '24539432682355581');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=24539432682355581&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Tajawal:wght@400;700;800;900&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --red:#C32828;--red-l:#E63939;--red-d:#951212;
+  --dark:#080608;--dark2:#100C0F;--dark3:#1A1218;
+  --white:#FFFFFF;--text:#F0EBE6;--muted:#7A7078;
+  --border:rgba(255,255,255,0.07);--gold:#D4AF37;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Cairo',sans-serif;background:var(--dark);color:var(--text);overflow-x:hidden;direction:rtl;line-height:1.7}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  padding:0 6%;height:64px;
+  display:flex;align-items:center;justify-content:space-between;
+  background:rgba(8,6,8,0.92);backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border);
+}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.nav-logo img{height:30px}
+.nav-logo-name{font-family:'Tajawal',sans-serif;font-size:17px;font-weight:800;color:var(--white)}
+.nav-logo-name span{color:var(--red-l)}
+.nav-wa{
+  display:flex;align-items:center;gap:8px;padding:9px 22px;
+  border-radius:8px;background:#25D366;color:var(--white);
+  font-size:13px;font-weight:700;text-decoration:none;
+  font-family:'Cairo',sans-serif;transition:all 0.2s;
+}
+.nav-wa:hover{background:#1fba59;transform:translateY(-1px)}
+
+/* ── HERO ── */
+.hero{
+  min-height:100vh;display:flex;align-items:center;
+  padding:110px 6% 70px;position:relative;overflow:hidden;
+  text-align:center;
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 90% 70% at 50% 40%,rgba(195,40,40,0.11) 0%,transparent 60%),
+    radial-gradient(ellipse 60% 50% at 80% 80%,rgba(212,175,55,0.04) 0%,transparent 50%);
+}
+.hero-grid{
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.015) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,0.015) 1px,transparent 1px);
+  background-size:60px 60px;
+}
+.hero-inner{position:relative;z-index:2;max-width:820px;margin:0 auto;width:100%}
+
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:7px 18px;border-radius:100px;
+  background:rgba(195,40,40,0.1);border:1px solid rgba(195,40,40,0.25);
+  font-size:12px;font-weight:700;color:var(--red-l);
+  letter-spacing:1.5px;margin-bottom:28px;
+}
+.eyebrow-dot{width:6px;height:6px;border-radius:50%;background:var(--red-l);animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0.3}}
+
+.hero-h1{
+  font-family:'Tajawal',sans-serif;
+  font-size:clamp(40px,6vw,76px);
+  font-weight:900;line-height:1.08;
+  color:var(--white);letter-spacing:-1px;
+  margin-bottom:10px;
+}
+.hero-h1 .red{color:var(--red-l)}
+.hero-h1 .gold{color:var(--gold)}
+
+.hero-hook{
+  font-family:'Tajawal',sans-serif;
+  font-size:clamp(18px,2.5vw,26px);
+  font-weight:400;color:rgba(255,255,255,0.45);
+  margin-bottom:32px;font-style:italic;
+}
+
+.hero-body{
+  font-size:18px;font-weight:300;color:var(--muted);
+  line-height:2;max-width:600px;margin:0 auto 44px;
+}
+.hero-body strong{color:var(--text);font-weight:600}
+
+.hero-cta-wrap{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap}
+.btn-wa{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:17px 38px;border-radius:12px;
+  background:#25D366;color:var(--white);
+  font-weight:800;font-size:17px;font-family:'Cairo',sans-serif;
+  text-decoration:none;box-shadow:0 10px 36px rgba(37,211,102,0.3);
+  transition:all 0.3s;
+}
+.btn-wa:hover{transform:translateY(-3px);box-shadow:0 16px 44px rgba(37,211,102,0.45)}
+.btn-ghost{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:17px 28px;border-radius:12px;
+  border:1px solid rgba(255,255,255,0.12);
+  color:rgba(255,255,255,0.55);font-size:15px;
+  font-family:'Cairo',sans-serif;text-decoration:none;
+  transition:all 0.2s;
+}
+.btn-ghost:hover{color:var(--white);border-color:rgba(255,255,255,0.3)}
+
+.hero-reassurance{
+  margin-top:28px;font-size:13px;color:var(--muted);
+  display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;
+}
+.reassure-item{display:flex;align-items:center;gap:6px}
+.reassure-check{color:var(--red-l);font-size:14px;font-weight:700}
+
+/* ── STORY SECTION ── */
+.story{padding:90px 6%;}
+.story-inner{max-width:1100px;margin:0 auto}
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.story-label{
+  font-size:11px;font-weight:700;color:var(--red-l);
+  letter-spacing:3px;text-transform:uppercase;margin-bottom:14px;display:block;
+}
+.story-h2{
+  font-family:'Tajawal',sans-serif;
+  font-size:clamp(28px,3.5vw,46px);
+  font-weight:900;color:var(--white);
+  line-height:1.15;margin-bottom:22px;
+}
+.story-h2 em{font-style:normal;color:var(--red-l)}
+.story-p{font-size:16px;color:var(--muted);line-height:1.95;margin-bottom:16px}
+.story-p strong{color:var(--text);font-weight:600}
+
+.story-numbers{display:flex;gap:32px;margin-top:36px;padding-top:32px;border-top:1px solid var(--border)}
+.sn-item{}
+.sn-val{
+  font-family:'Tajawal',sans-serif;font-size:36px;
+  font-weight:900;color:var(--white);line-height:1;
+}
+.sn-val span{font-size:20px;color:var(--red-l)}
+.sn-lbl{font-size:12px;color:var(--muted);margin-top:5px}
+
+/* Story visual */
+.story-visual{display:flex;flex-direction:column;gap:14px}
+.sv-card{
+  background:var(--dark2);border:1px solid var(--border);
+  border-radius:14px;padding:20px 22px;
+  display:flex;gap:16px;align-items:flex-start;
+  transition:all 0.2s;
+}
+.sv-card:hover{border-color:rgba(195,40,40,0.2);transform:translateX(-4px)}
+.sv-icon{
+  width:44px;height:44px;border-radius:10px;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;font-size:20px;
+}
+.sv-title{font-size:14px;font-weight:700;color:var(--white);margin-bottom:4px}
+.sv-desc{font-size:12px;color:var(--muted);line-height:1.6}
+
+/* ── LIFE SECTION ── */
+.life{padding:90px 6%;background:var(--dark2)}
+.life-inner{max-width:1100px;margin:0 auto;text-align:center}
+.sec-label{font-size:11px;font-weight:700;color:var(--red-l);letter-spacing:3px;text-transform:uppercase;margin-bottom:14px;display:block}
+.sec-h2{
+  font-family:'Tajawal',sans-serif;font-size:clamp(28px,3.5vw,46px);
+  font-weight:900;color:var(--white);margin-bottom:12px;
+}
+.sec-h2 em{font-style:normal;color:var(--red-l)}
+.sec-sub{font-size:16px;color:var(--muted);max-width:520px;margin:0 auto 56px;line-height:1.9}
+
+.life-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.life-card{
+  background:var(--dark);border:1px solid var(--border);
+  border-radius:18px;padding:32px 26px;
+  text-align:right;position:relative;overflow:hidden;
+  transition:all 0.25s;
+}
+.life-card::after{
+  content:'';position:absolute;bottom:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--red-l),transparent);
+  opacity:0;transition:opacity 0.25s;
+}
+.life-card:hover{transform:translateY(-5px);border-color:rgba(195,40,40,0.2)}
+.life-card:hover::after{opacity:1}
+.lc-num{
+  font-family:'Tajawal',sans-serif;font-size:52px;
+  font-weight:900;color:rgba(195,40,40,0.12);
+  line-height:1;margin-bottom:16px;display:block;
+  direction:ltr;
+}
+.lc-title{font-size:17px;font-weight:700;color:var(--white);margin-bottom:10px}
+.lc-body{font-size:14px;color:var(--muted);line-height:1.8}
+
+/* ── HOW SIMPLE ── */
+.how{padding:90px 6%}
+.how-inner{max-width:900px;margin:0 auto;text-align:center}
+.how-steps{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:0;margin-top:56px;position:relative;
+}
+.how-steps::before{
+  content:'';position:absolute;
+  top:28px;right:calc(25% - 28px);left:calc(25% - 28px);height:1px;
+  background:linear-gradient(90deg,transparent,rgba(195,40,40,0.4),rgba(195,40,40,0.7),rgba(195,40,40,0.4),transparent);
+}
+.how-step{text-align:center;padding:0 12px}
+.step-circle{
+  width:56px;height:56px;border-radius:50%;
+  margin:0 auto 18px;
+  background:var(--dark2);border:1.5px solid rgba(195,40,40,0.3);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Tajawal',sans-serif;font-size:22px;
+  font-weight:900;color:var(--red-l);position:relative;z-index:1;
+}
+.step-title{font-size:14px;font-weight:700;color:var(--white);margin-bottom:6px}
+.step-desc{font-size:12px;color:var(--muted);line-height:1.6}
+
+/* ── SOCIAL PROOF ── */
+.proof{padding:90px 6%;background:var(--dark2)}
+.proof-inner{max-width:1100px;margin:0 auto}
+.proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:48px}
+.proof-card{
+  background:var(--dark);border:1px solid var(--border);
+  border-radius:16px;padding:26px;
+}
+.proof-stars{color:var(--gold);font-size:14px;letter-spacing:2px;margin-bottom:12px}
+.proof-text{font-size:14px;color:var(--muted);line-height:1.8;margin-bottom:18px;font-style:italic}
+.proof-text::before{content:'"';color:var(--red);font-size:32px;font-family:Georgia;line-height:0;vertical-align:-12px;margin-left:4px;opacity:0.4}
+.proof-author{display:flex;align-items:center;gap:10px}
+.proof-avatar{
+  width:38px;height:38px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:14px;font-weight:700;flex-shrink:0;
+}
+.proof-name{font-size:14px;font-weight:700;color:var(--white)}
+.proof-country{font-size:11px;color:var(--muted);margin-top:2px}
+
+/* ── FINAL CTA ── */
+.final-cta{
+  padding:100px 6%;
+  background:linear-gradient(160deg,var(--red-d) 0%,var(--red) 40%,#280505 100%);
+  position:relative;overflow:hidden;text-align:center;
+}
+.final-cta::before{
+  content:'';position:absolute;inset:0;
+  background-image:linear-gradient(rgba(255,255,255,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.02) 1px,transparent 1px);
+  background-size:44px 44px;
+}
+.fc-inner{position:relative;z-index:1;max-width:680px;margin:0 auto}
+.fc-h2{
+  font-family:'Tajawal',sans-serif;
+  font-size:clamp(32px,5vw,58px);font-weight:900;
+  color:var(--white);line-height:1.1;margin-bottom:16px;
+}
+.fc-sub{font-size:18px;color:rgba(255,255,255,0.6);margin-bottom:40px;font-weight:300;line-height:1.8}
+.fc-btn{
+  display:inline-flex;align-items:center;gap:12px;
+  padding:20px 48px;border-radius:14px;
+  background:var(--white);color:#128c3e;
+  font-weight:800;font-size:18px;
+  font-family:'Cairo',sans-serif;text-decoration:none;
+  box-shadow:0 12px 36px rgba(0,0,0,0.35);
+  transition:all 0.25s;
+}
+.fc-btn:hover{transform:translateY(-3px);box-shadow:0 18px 48px rgba(0,0,0,0.45)}
+.fc-note{margin-top:22px;font-size:13px;color:rgba(255,255,255,0.4)}
+
+/* ── FOOTER ── */
+footer{
+  padding:30px 6%;background:var(--dark2);
+  border-top:1px solid var(--border);
+}
+.footer-inner{
+  max-width:1100px;margin:0 auto;
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:16px;
+}
+.footer-brand{display:flex;align-items:center;gap:8px;text-decoration:none}
+.footer-brand img{height:24px}
+.footer-brand-name{font-family:'Tajawal',sans-serif;font-size:14px;font-weight:800;color:var(--white)}
+.footer-brand-name span{color:var(--red-l)}
+.footer-disclaimer{font-size:11px;color:var(--muted);max-width:480px;line-height:1.6;text-align:left}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  .story-grid{grid-template-columns:1fr;gap:48px}
+  .life-grid{grid-template-columns:1fr}
+  .how-steps{grid-template-columns:repeat(2,1fr);gap:32px}
+  .how-steps::before{display:none}
+  .proof-grid{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  .hero-cta-wrap{flex-direction:column;align-items:center}
+  .story-numbers{gap:20px}
+  .final-cta{padding:70px 6%}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAACgCAIAAAAErfB6AAABCGlDQ1BJQ0MgUHJvZmlsZQAAeJxjYGA8wQAELAYMDLl5JUVB7k4KEZFRCuwPGBiBEAwSk4sLGHADoKpv1yBqL+viUYcLcKakFicD6Q9ArFIEtBxopAiQLZIOYWuA2EkQtg2IXV5SUAJkB4DYRSFBzkB2CpCtkY7ETkJiJxcUgdT3ANk2uTmlyQh3M/Ck5oUGA2kOIJZhKGYIYnBncAL5H6IkfxEDg8VXBgbmCQixpJkMDNtbGRgkbiHEVBYwMPC3MDBsO48QQ4RJQWJRIliIBYiZ0tIYGD4tZ2DgjWRgEL7AwMAVDQsIHG5TALvNnSEfCNMZchhSgSKeDHkMyQx6QJYRgwGDIYMZAKbWPz9HbOBQAAAOdklEQVR42u3be3AVVZoA8O873X1z33kHAmR2A5NIjOUjg0sBEUNJKUtpWbpjlUQX3YGidhkR1/W1WoUPyl2sQmYmxVTtjFLMgMKM46NQBCxheRrXIOJjgophFUQIkNw87yO3+3zf/nFu2ghB3XHXUPL9qILkpm93c78+5zvnOycAQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCHOczjil1eIAMAw+JfBQ26N8Ss/GvzO/EsSw3OWwh/EQyot+CzRRWK2lfrbwuL6/Fix4zAwMxMDM2smZiYAJiZgYiYGIiZgzUzEBNDhuvvSqbdSKebT2rgY6QCb6F4Wi/9iwoS6SJiYPWZmIgZi1kSaiZg1syYmJo+ZCDSRx0RMLpn4k8v8fmbgV50dR7JZifG5EmAT3Uti8Q0X1RYo7HI9AmZiBtbMTOwxkwkwgQYiZo+AiDSTBtLEGpCYicj1dBjhlNYPnjz1hSsxHoY1Ig9UQKm1NTXj8wJdrmchonkdkc3oiRmQgRE4N/JiQFaICpkRiNl1dTrtZTJ2KNhPFAce6zi70mkJ55ns77/5auarCov+JhrtdLM2IjEzMAGzScKc+5oQ2UJm1K6nM2lvION6nkaEUFgVF8ZGl2MsdnTT5rxwqM9xah2nJi+vNZNRg+Nqy/qGZ5eImFkC/P/iivx8hCETIwYAIObcnEhZ7GmdzniZlMcA0VhgfGX8xxPCE2si1dXhysq8UaPyCgszqWTxH5/7bN361Dv7IpFwjRNozWT8lKO1/lY9mGX9sIM9MgEucWwGBmZGJAYGYGZGZERKpdx0igJBp7Iyv+6y6OWXR2ovDFb8yAmFTjtJz7HjXcDHuhIRSxFxTPnzaXAcZ8aMGel0mogQMRwOo5ltMw8MDGSzWcuy3n333f7+/m/5HEiA/9dyLcZ0zACgLOrr81zP/vGE/Kuuis2YEb7wwjODSgDJnp7e9hN9J9rfWLEiuWFD6ehRXiDPb4CICMy2bd9yyy1z58417/rwww+z2SwiBgKB8ePHBwIBAKirqztw4EBTU1M0Gl28eHFnZ+eXdyUB/q7RBWAADaCYQSFnXTeZCvzkstJbbo03NDiRyNCI9nR0JA4d6jhwINHa2vvxx+kvvtCdnbqvP+RYhX/9V5nsABMxIpvhGDMAZDKZ2267raCg4Nprr+3t7Z02bVpXV5c5YXl5+fLlyxsbG0+dOnXNNdcsWLAAAD744INly5bZtu15ngT4/yrCDMygFGfSFI6UPPBA4Y03WnbufpLJ5PH33zu2542uN/8r2fpnOnbMSqdtx4nE4xHHJkTOj3ukB7JZBsx18PyVzMrMXV1dSilEDIVC3d3diMjMx48fnzdvXkNDQ0lJSWtra3t7eygUam5u9t9oDvO7GaUUERHRsMmbmU3n73f1iGguCgCe5/mHmUx//nTRzGZeNJCh0rIxTU2RmhoA8Ig+a2k5vGFD97atfPCToPZipWXlVVWR2bNDVdXRmolH3n33k3/791hRYTqVNN0yM2iTv796Aa21P5A2g3M/AJlMZvLkyYlEIpVKjRs3zrbtgYEBE49hB9sAYMLsn4GZT0ve/gGn/WjEc/zI5WDzuSsse+KJSE2Np/WBjRs/W7WKmt+MI0y46KKCxXdGp04L1dYGx4yxlDLvik2ZMuHvfrrjX/7Z27ZNRaPgeWZyRQB8RpHDD6plWZZlKaVc17VtOxAIHD16NBwOz5gxo6ys7JJLLmlubt64cWNtbW1lZWVtbW0kEvnoo4/mzZtXWFjY0tKyatWqvXv3mhD67fvmm2+eO3duRUVFW1vbU089tWnTJnPAxIkTq6qqampqiouL77///htuuKGxsTEYDC5durSlpWXog/IDLawgAsB/VFUn6us/vrDmyB0/Z+ajH3yw4aafvlpQ8E7NxMMPPND9ZnM2M8DD2fbkk+tuvPE3lZV/LC9/dsyYteVj1owevaqsbP2osrmxGACYB8G2bQBYs2aN6aiDwaC5eigU2r59++23366Uuvjiiw8ePGhOu3TpUgBYuXKlf6FEIvHyyy9v3LjRtMj58+ebB0UpFQ6HX3rpJWbeu3fvkiVL9u3bx8wrVqwwl1i6dKk5g+u6u3bt8k/4wgsv+Dd2XgS4s77+wwnju55++mBLy3Pjx79dMe7Yw0tShz/L1TqI/I8m47rH2g79efPmbU8++eux456LRp8fN3b9mDHPlpevGT36d6NGPVVauq6s9O9j0dMCvHbtWmbOZDLbt2/fsmXLzp07T506xcyNjY3mZkaNGpVIJFzXve+++8wrK1eudF336NGjo0ePNq/MnDnT8zytdV1dncms5jnYvHmz/5/auXMnM990003m22XLlrmu63ne1q1bKysrZ86cuXr16ilTppie/DwZRTMTWaHwqTff/PjpVbWx2Limpvj06QDArouOg4idx48f3rPn+O5dPe+9737+OfT0WJ43pqCASko8z81lcVMeYWDks83EzAfd09NTUFCQSqVmzZrlf8rJZDKVShUWFppXEDGRSNi2nUwmT548ads2Im7duvWNN96YPn363Xfffeutt1ZXVy9YsEBrvXz5csuyotFof3//2rVr6+vr77jjjueffx4AOjo6bNvu6Oi4/vrrk8nkp59+unXr1qEZ/fyYJjFxKKRbWsYjVvz+d7FLL8uF1nE+aW7+aM2a3j27nZMnQ4DFeXkq4HiFhR6z63nkeblVxcEQcu7P8FzXXb58uRlGAcD69ev9gY8/3PUfCNP0lVKO4wwMDDiOg4j79++/4oor6uvrAaChocFxHM/zVq9e7UcrFAoppWpqauLxeE9PjzmJyfdKKaWU3y2dT6NoE5yBgfg/3B679DLOZjEQSPb1bXvoof4XXywlLoxGuKTE1ZwlympPa08Tm0XhXPnajJ+BCZgAgYdfGUPE0tLS9vZ2RNRaz5kzx8R16ND6zHHZ0C+6uroQsaioyHGc8vJyZu7t7Z0/f35vb68/VHZdl4gymYz/XvPo+Lnm/BlFf/nBmZX8yKRJQARKua67+Z/+MbjlterysRnWrudqT2uz8Mu5Vsq5IolpuX5lAwHw7G0YtNae55mgIqIZDH/L20VE0yK11lrrbDYLAHl5eW+//XYikRh2cnxOUSNyVcqFCFnr7PF2UApt+/N9b1vbd4wbV5HystpzTUM1K0xglpgAiJlMVYOBTD8wWDIZNjZnLZF+05Gm4mGOr6ioYOYjR44Q0YEDBxAxEolMnTrVsqxgMOg4TiAQCAQC06ZN83P5+R5g05BJawwGE3/4g5tOA4Bj25FAIKu1X8vMpa5cFAeDPVgHG9KMh0nBlmWZXDu0wzwzqCYvaq2Hjm+JKJ1Om6mOUmrq1KmI+OKLLwLA9u3bDx8+DACLFi3SWmcyGdd1s9nsXXfdtW7dOlP58q+LiCMe7JEJcC5sRBjKG/j4o7Z77/Wy2YpJl8emT0+dPIG2zUREuRhTro8Gf+IEuRzMxAyAfEaETXdaVFTEzKaR+TXFodUoAAiHw8ycn59vIm2OqaioWLhwYTweLywsXLFiRVVVVVtbW1NTk1Kqt7d34cKFRHT11Vc/++yzdXV1VVVVjz766BNPPLFgwQLP84goFosxcygUMnc7sjEeqRZslvZYa63i8f5XN703d27XJ5/85Le/CU2enD5+jBUCflliZMhFlM3uDvN8DO74MDHP7aVFBIBgMPjMM89cd911iBgMBl955ZUrr7ySmU2ONNGtqKjYsmVLUVERIi5atOiee+7xk2gmk3nkkUdOnDjR0dGxePHi3bt3z5492yxXKKU2bdo0a9as/fv3NzY27tu37+DBg/fee29jY+Nrr72GiHfeeefixYsRsaCgYPPmzZWVlSMbY3skQst+FQMBSWurIO62tLx3ww3FP/vZhF/88tivV5584QWyFKHSJsXm5rsm4Kj9TA5Mg2vJZjeQeSBc1121apWpSBBRNBpta2sbOlFh5u7u7iVLlvT39zOzmRT5peP29vYpU6Y0NDQUFxe3tra+9dZb5rHw69Kvv/76tm3bJk2aVF1d3dfXt3Pnzu7ubpMUduzYMXv2bNd1ASAWi3V2do5sgL/vC1uImvlfK37081FlHe4AMmpmzUSI5HrJRJeuGJd//fXuqY6+/9xGyX4NqImISZPZZ5nbdmn6Z2IgAE0UVfindObVVFJ9t63wjz/++IMPPnjo0KELLrhg6DrBaTVkP8F/zSvniO+7BZuedHdv74Ky0tw6wWARgFDllZToRGei6Vde2WhtKctPvabF+iMvf6Y0OMpyGT503dOWd4a2m2E35Qyd1QyNEBEFAoFsNuuvFZ5Wo9Ba+8uC5ubPVjwZ8c1A33eAiQEBmnt79vT11UfCJ1zPAiYAYsxtjHUcp6jYSqU80p7Zkjc4pDIFLJ1ru2bWBC5zXOFe1/3UdXFI8/02ZaOhbc6UQfwRdTqd/vrwnLliOFLFyG/oMkdkXMcA7ySTM/ILymwrRVoTewye2enO7GnyADwE860GJsp9oU2fDMyAxMjAccSjRL/t78/wX/7JmpY6Z86chx9+OBwOFxUVBYPBHTt2/AB28IxAqZIAFMBnmczctraHxo6dHAlbirVmQvAINRMhe0Sa0FMqt/1dEbGlmQlZAxEgARPiAKkWN7sumezS+rvsevcnYI899lgqlXIcx2zY+wEEeAR/NwmIAQAujUQvDYcKLMXsF6pyY2P9lf4ZKLcTE5iJAbqIDrref7tZ+PI3DsU5E2D/2nwOnOS08uTXpFgJ8F+SkoefJp651HOWDl8IIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQ54H/AUxCozqwXU00AAAAAElFTkSuQmCC" alt="Fiper"/>
+    <span class="nav-logo-name">Fiper</span>
+  </a>
+  <a href="https://wa.me/97433600905?text=مرحباً%20أريد%20معرفة%20المزيد%20عن%20فايبر" class="nav-wa" target="_blank">
+    💬 تواصل الآن
+  </a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow">
+      <span class="eyebrow-dot"></span>
+      وسيط مرخّص · قرارات تداول أوضح
+    </div>
+    <h1 class="hero-h1">
+      لا تدخل السوق<br/>
+      وأنت <span class="red">تخمّن</span>.
+    </h1>
+    <p class="hero-hook">فايبر يعطيك طريقة أهدأ لفهم التداول قبل أن تبدأ.</p>
+    <p class="hero-body">
+      منصة تجمع الحسابات، الأدوات، ونسخ التداول في تجربة واحدة واضحة.
+      <strong>تعرف ما الذي يحدث، ما مستوى المخاطرة، وكيف تبقى أنت صاحب القرار</strong>
+      من أول محادثة حتى أول صفقة.
+    </p>
+    <div class="hero-cta-wrap">
+      <a href="https://wa.me/97433600905?text=مرحباً%20أريد%20معرفة%20كيف%20أبدأ%20مع%20فايبر" class="btn-wa" target="_blank">
+        💬 اسأل قبل أن تبدأ
+      </a>
+      <a href="#how" class="btn-ghost">كيف يعمل؟ ↓</a>
+    </div>
+    <div class="hero-reassurance">
+      <div class="reassure-item"><span class="reassure-check">✓</span> شرح واضح قبل التسجيل</div>
+      <div class="reassure-item"><span class="reassure-check">✓</span> المخاطر موضّحة من البداية</div>
+      <div class="reassure-item"><span class="reassure-check">✓</span> أنت تدير حسابك وقراراتك</div>
+      <div class="reassure-item"><span class="reassure-check">✓</span> دعم عربي 24/7</div>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="story">
+  <div class="story-inner">
+    <div class="story-grid">
+      <div>
+        <span class="story-label">لماذا فايبر؟</span>
+        <h2 class="story-h2">
+          المال الذي تتركه<br/>في البنك<br/><em>يخسر قيمته كل يوم.</em>
+        </h2>
+        <p class="story-p">
+          التضخم يأكل مدخراتك. الراتب لا يكفي. والعقارات أصبحت بعيدة.
+          <strong>لكن الأسواق المالية مفتوحة أمامك 24 ساعة.</strong>
+        </p>
+        <p class="story-p">
+          فايبر تتيح لك أن تنسخ صفقات المتداولين المحترفين تلقائياً —
+          <strong>بدون أن تجلس أمام الشاشة، وبدون أن تتعلم التداول من الصفر.</strong>
+        </p>
+        <p class="story-p">
+          أنت تختار المتداول، تحدد المبلغ، وتنام مرتاحاً.
+        </p>
+        <div class="story-numbers">
+          <div class="sn-item">
+            <div class="sn-val">$100<span>+</span></div>
+            <div class="sn-lbl">الحد الأدنى للبداية</div>
+          </div>
+          <div class="sn-item">
+            <div class="sn-val">24<span>/7</span></div>
+            <div class="sn-lbl">الأسواق مفتوحة</div>
+          </div>
+          <div class="sn-item">
+            <div class="sn-val">0<span>%</span></div>
+            <div class="sn-lbl">خبرة مطلوبة</div>
+          </div>
+        </div>
+      </div>
+      <div class="story-visual">
+        <div class="sv-card">
+          <div class="sv-icon" style="background:rgba(195,40,40,0.1)">🤖</div>
+          <div>
+            <div class="sv-title">نسخ التداول التلقائي</div>
+            <div class="sv-desc">انسخ صفقات المحترفين بشكل تلقائي كامل. بدون تدخل منك، بدون وقت إضافي من يومك.</div>
+          </div>
+        </div>
+        <div class="sv-card">
+          <div class="sv-icon" style="background:rgba(37,211,102,0.1)">💹</div>
+          <div>
+            <div class="sv-title">تداول فردي بكل الأدوات</div>
+            <div class="sv-desc">إذا أردت التداول بنفسك — عملات، ذهب، مؤشرات. MT5 وcTrader بفروقات من 0.1 نقطة.</div>
+          </div>
+        </div>
+        <div class="sv-card">
+          <div class="sv-icon" style="background:rgba(212,175,55,0.1)">💳</div>
+          <div>
+            <div class="sv-title">بطاقة فايبر — أرباحك في يدك</div>
+            <div class="sv-desc">بطاقة مرتبطة بحسابك مباشرة. اسحب أرباحك من أي صراف حول العالم أو ادفع أونلاين.</div>
+          </div>
+        </div>
+        <div class="sv-card">
+          <div class="sv-icon" style="background:rgba(59,130,246,0.1)">📊</div>
+          <div>
+            <div class="sv-title">تحليلات Trading Central</div>
+            <div class="sv-desc">أدوات تحليل احترافية مجاناً لعملاء فايبر. اتخذ قرارات مبنية على بيانات حقيقية.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIFE -->
+<section class="life">
+  <div class="life-inner">
+    <span class="sec-label">ماذا يتغير في حياتك؟</span>
+    <h2 class="sec-h2">دخل ثانٍ يغيّر <em>كل شيء</em></h2>
+    <p class="sec-sub">ليس فقط أرقاماً في الحساب — بل حرية حقيقية في قراراتك اليومية.</p>
+    <div class="life-grid">
+      <div class="life-card">
+        <span class="lc-num">01</span>
+        <div class="lc-title">تقدر ترفض</div>
+        <div class="lc-body">حين يكون عندك دخل ثانٍ، تقدر ترفض العمل الذي لا يناسبك، تتفاوض براتبك، وتختار وقتك بشكل مختلف.</div>
+      </div>
+      <div class="life-card">
+        <span class="lc-num">02</span>
+        <div class="lc-title">تخطط بثقة</div>
+        <div class="lc-body">رحلة، بيت، تعليم الأولاد — الأشياء التي كانت "لاحقاً" تصبح ممكنة حين يكون الدخل أكثر من مصدر.</div>
+      </div>
+      <div class="life-card">
+        <span class="lc-num">03</span>
+        <div class="lc-title">تنام مرتاحاً</div>
+        <div class="lc-body">لا قلق من "ماذا لو توقف الراتب؟" حين أموالك تعمل لصالحك حتى وأنت نائم.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW -->
+<section class="how" id="how">
+  <div class="how-inner">
+    <span class="sec-label">كيف تبدأ؟</span>
+    <h2 class="sec-h2" style="font-family:'Tajawal',sans-serif;font-size:clamp(28px,3.5vw,44px);font-weight:900;color:var(--white);margin-bottom:10px">4 خطوات فقط</h2>
+    <p style="font-size:16px;color:var(--muted);max-width:440px;margin:0 auto;line-height:1.8">أبسط بكثير مما تتخيل — وفريقنا معك في كل خطوة.</p>
+    <div class="how-steps">
+      <div class="how-step">
+        <div class="step-circle">1</div>
+        <div class="step-title">تواصل معنا</div>
+        <div class="step-desc">أرسل رسالة واتساب وفريقنا يشرح لك كل شيء بالعربي.</div>
+      </div>
+      <div class="how-step">
+        <div class="step-circle">2</div>
+        <div class="step-title">افتح حسابك</div>
+        <div class="step-desc">تسجيل بسيط في 5 دقائق. مرخّص ومنظّم دولياً.</div>
+      </div>
+      <div class="how-step">
+        <div class="step-circle">3</div>
+        <div class="step-title">اختر متداولك</div>
+        <div class="step-desc">شاهد سجلات المتداولين الحقيقية واختر من تريد نسخه.</div>
+      </div>
+      <div class="how-step">
+        <div class="step-circle">4</div>
+        <div class="step-title">المال يعمل</div>
+        <div class="step-desc">النسخ يعمل تلقائياً. أنت تتابع وأنت في راحتك.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="fc-inner">
+    <h2 class="fc-h2">
+      أموالك تستحق<br/>أن تعمل لصالحك.
+    </h2>
+    <p class="fc-sub">
+      تحدث مع فريقنا اليوم — الاستشارة مجانية، بدون التزامات، وبالعربي.
+    </p>
+    <a href="https://wa.me/97433600905?text=مرحباً%20أريد%20معرفة%20كيف%20أبدأ%20دخلاً%20إضافياً%20مع%20فايبر" class="fc-btn" target="_blank">
+      💬 &nbsp; ابدأ المحادثة الآن
+    </a>
+    <p class="fc-note">رد خلال دقائق · مجاناً تماماً · بدون أي ضغط</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <a href="https://fiper.me" class="footer-brand" target="_blank">
+      <img src="data:image/png;base64,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" alt="Fiper"/>
+      <span class="footer-brand-name">Fiper</span>
+    </a>
+    <div class="footer-disclaimer">
+      Fiper هو الاسم التجاري لـ TOB TRADING MAU LTD · منظّمة من FSC موريشيوس · رقم الترخيص: GB23201759 · التداول ينطوي على مخاطر وقد تخسر جزءاً من رأس مالك.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
